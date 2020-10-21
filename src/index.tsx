@@ -3,10 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Clock from './Clock';
+import ListBeers from './ListBeer';
+import {BrowserRouter, Route} from 'react-router-dom';
+import About from './About';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <ListBeers />
+    <Route path="/about/" component={About}/>
+    </BrowserRouter>
+
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
